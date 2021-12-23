@@ -3,21 +3,26 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+
+      <Manufature title="Mobile Operating System" list="Android" list1="Blackberry" list2="Iphone" list3="Windows Phone" />
+      <Manufature title="Mobile Manufactures" list="Samsung" list1="HTC" list2="Micromax" list3="Apple" />
+
+    </div>
+
+  );
+}
+
+function Manufature(props) {
+  return (
+    <div className="app">
+      <h1>{props.title}</h1>
+      <ul>
+        <li>{props.list}</li>
+        <li>{props.list1}</li>
+        <li>{props.list2}</li>
+        <li>{props.list3}</li>
+      </ul>
     </div>
   );
 }
